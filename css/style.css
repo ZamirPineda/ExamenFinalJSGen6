@@ -49,7 +49,7 @@ footer {
 }
 h1, h2, h3 {
     font-weight: 700;
-    color: #4E73DF;
+    color: #000000;
 }
 h4,
 h5,
@@ -60,6 +60,11 @@ p {
 }
 
 .container {
+    max-width: 1200px;
+    width: 100%;
+}
+.container-main {
+    position: relative;
     max-width: 1200px;
     width: 100%;
 }
@@ -122,11 +127,15 @@ p {
 
 .cta-btn {
     font-weight: bold;
-    background-color: #7FC80E;
+    background-color: #99ff0000;
     line-height:40px;
     height:40px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .cta-btn:hover, .btns:hover {
@@ -227,11 +236,26 @@ p {
 
     border: 2px dashed #FFFFFF;
 }
+.division-right{
+    width: 20%;
+    position: absolute;
+    left: 95%;
+
+    border: 2px dashed #030303;
+}
+.image-main{
+    position: absolute;
+    left: 200px;
+
+}
+.text-right{
+    text-align: right;
+}
 
 /* BOTONES */
 
 .btns {
-    background-color: #7FC80E;
+    background-color: #ffffff00;
     line-height:65px;
     height:65px;
     padding:  0 2rem;
@@ -258,111 +282,10 @@ p {
     font-size: 45px;
     margin-bottom: 3rem;
 }
-
-/* SECTION SERVICIOS */
-
-.section-services .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;    
+.subtitle-section {
+    font-size: 25px;
+    margin-bottom: 3rem;
 }
-.section-services .container .box-services {
-    width: 25%;
-    padding: 2rem;
-}
-.section-services .container .box-services .box-image-services {
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 2rem;
-    margin: auto;
-    margin-bottom: 25px;
-    transition: .4s all ease-in-out;
-    border: 1px white solid;
-    cursor: pointer;
-}
-.section-services .container .box-services p {
-    line-height: 25px;
-}
-.section-services .container .box-services .box-image-services:hover {
-    box-shadow: 0 20px 40px -20px rgba(78, 114, 223, 0.5);
-    border: 1px #4E73DF solid;
-}
-.section-services .container .box-services .box-image-services img {
-    max-width: 160px;
-}
-
-.section-services .container .box-services .title-services {
-    margin-bottom: 1rem;
-}
-
-
-/* SECTION BENEFITS */
-
-.section-benefits {
-    background-color: #DDEAFB;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.section-benefits .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 2rem 0 4rem;
-    width: 50%;
-    justify-content: flex-start;
-}
-
-.section-benefits .title-section {
-    padding-left: 2rem;
-}
-
-.section-benefits .container .box-benefits {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.section-benefits .container .box-benefits figure {
-    width: auto;
-}
-.section-benefits .container .box-benefits figure .icon-benefits {
-    width: 100px;
-}
-
-.section-benefits .container .box-benefits div {
-    margin-top: -25px;
-    margin-left: 1rem;
-}
-.section-benefits .container .box-benefits div h3 {
-    margin-bottom: 10px;
-}
-.section-benefits .container .box-benefits div p {
-    line-height: 25px;
-}
-
-.section-benefits .box-image-benefits {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    display: contents;
-}
-
-.section-benefits .box-image-benefits img {
-    max-width: 550px;
-}
-
 
 /* CONTACTO SECTION */
 
@@ -394,28 +317,6 @@ p {
     margin-bottom:1.4rem;
 }
 
-input, select, textarea {
-    font-size:14px;
-    outline:none;
-    height:3rem;
-    width: 90%;
-    box-sizing: content-box;
-    overflow: visible;
-    color: #9c9c9c;
-    padding: 0 1rem;
-    border-radius: 5px;
-    box-shadow: none;
-    transition: .4s all;
-    border: none;
-    border: 1px solid #9c9c9c;
-    -webkit-appearance: none;
-}
-input:focus, textarea:focus {
-    box-shadow: 0 20px 40px -20px rgba(78, 114, 223, 0.5);
-    border: 1px solid #4E73DF;
-    color: #4E73DF;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -431,16 +332,6 @@ textarea.textarea-form {
     min-height: 150px;
     max-width: 625px;
     padding:1rem 2rem
-}
-
-select.select-form {
-    appearance: none;
-    line-height:normal;
-    position: relative;
-    background-position: right 10px top 50%;
-    background-repeat: no-repeat;
-    background-image: url(../images/chevron-down.svg);
-
 }
 
 ::-webkit-input-placeholder {
@@ -540,44 +431,8 @@ button.btn-enviar:focus,
         line-height: 35px;
         height: 35px;
     }
-
-    /* SERVICES SECTION */
-    .title-section {
-        font-size:35px
-    }
-    .section-services .container .box-services {
-        width: 50%;
-    }
-
-    /* BENEFITS SECTION */
-    .section-benefits {
-        flex-direction: column;
-    }
-    .section-benefits .container {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
-    .section-benefits .title-section {
-        padding-left: 0;
-    }
-    .section-benefits .container .box-benefits {
-        margin-bottom: 2rem;
-        padding: 0 1rem 0 0;
-    }  
-    .section-benefits .container .box-benefits h3 {
-        line-height: 30px;
-    }
-    .section-benefits .container .box-benefits div {
-        margin-top: 0;
-    }
-    .section-benefits .box-image-benefits {
-        right: inherit;
-        bottom: 0;
-    }
-
-    /* CONTACTO SECTION */
+ 
+    /* ENTRADAS SECTION */
     .section-contact {
         background-position-y: 550px;
     }

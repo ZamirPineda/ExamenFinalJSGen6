@@ -5,3 +5,15 @@ $(document).ready(function() {
       return false;
     });
   });
+
+let ubicacionPrincipal = window.pageYOffset;
+window.onscroll = function(){
+  let ubicacionScroll = window.pageYOffset;
+  if(ubicacionPrincipal >= ubicacionScroll){
+    document.getElementById('header-menu').style.top= '0';
+  }
+  else{
+    document.getElementById('header-menu').style.top= '-200px';
+  }
+  ubicacionPrincipal = ubicacionScroll;
+}
