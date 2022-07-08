@@ -151,7 +151,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(../images/dishOnWhiteCeramicPlate.png);
 }
 .hero .container {
     display: flex;
@@ -264,7 +263,7 @@
     text-align: center;
     width: 100%;
     max-width: 300px;
-    color: white;
+    color: black;
     font-weight: 700;
     border-radius: 10px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
